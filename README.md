@@ -17,11 +17,11 @@ Label Studio is an open source data labeling tool. It lets you label data types 
 - [Set up machine learning models with Label Studio](#set-up-machine-learning-models-with-Label-Studio)
 - [Integrate Label Studio with your existing tools](#integrate-label-studio-with-your-existing-tools)
 
-## This is a remake version of Group 16
+## This is a remake version of Group 12
 - Member:
-- Lê Thị Kim Lệ
-- Nguyễn Thị Cẩm Nguyên
+- Nguyễn Thị Na
+- Nguyễn Thị Thùy Trang
 
-## New Functions compared to origin version
+## New Functions compared to origin version by Group 16 (Lê Thị Kim Lệ + Nguyễn Thị Cẩm nguyên
 - Add more people to organization with different role: Administrator / Manager / Annotator
 - People who were invited can sign up account via invite link provide by organization owner
