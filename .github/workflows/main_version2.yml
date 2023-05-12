@@ -1,0 +1,53 @@
+name: Dev deployment from Github to AWS
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Latest Repo
+        uses: actions/checkout@master
+        
+      - name: docker login
+        env:
+          DOCKER_USER: '${{ secrets.DOCKERHUB_USERNAME }}'
+          DOCKER_PASSWORD: '${{ secrets.DOCKERHUB_TOKEN }}'
+        run: |
+          docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+     
+      - name: Build and push
+        run: |
+          DOCKER_BUILDKIT=1 docker build -t current_deploy .
+          docker tag current_deploy:latest lethikimle/label-studio
+          docker push lethikimle/label-studio
+          
+      # .github/workflows/main.yml continued
+      
+      - name: Get Timestamp
+        uses: gerred/actions/current-time@master
+        id: current-time
+
+      - name: Run String Replace
+        uses: frabert/replace-string-action@master
+        id: format-time
+        with:
+          pattern: '[:\.]+'
+          string: "${{ steps.current-time.outputs.time }}"
+          replace-with: '-'
+          flags: 'g'
+
+      - name: Deploy to EB
+        uses: einaregilsson/beanstalk-deploy@v16
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          application_name: Label_Studio_Deploy
+          environment_name: LabelStudioDeploy-env
+          version_label: "Label_Studio_Deploy-version-1"
+          region: us-east-1
+          deployment_package: Dockerrun.aws.json
+          use_existing_version_if_available: true
+          
