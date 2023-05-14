@@ -22,6 +22,6 @@ Label Studio is an open source data labeling tool. It lets you label data types 
 - Nguyễn Thị Na
 - Nguyễn Thị Thùy Trang
 
-## New Functions compared to origin version by Group 16 (Lê Thị Kim Lệ + Nguyễn Thị Cẩm nguyên
+## New Functions compared to origin version by Group 16 (Lê Thị Kim Lệ + Nguyễn Thị Cẩm Nguyên)
 - Add more people to organization with different role: Administrator / Manager / Annotator
 - People who were invited can sign up account via invite link provide by organization owner
