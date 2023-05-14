@@ -30,7 +30,6 @@ def test_create_webhook():
     webhook = driver.find_element(By.XPATH,
                                        '//a[contains(@class, "ls-main-menu__item") and text()="Webhooks"]')
     webhook.click()
-
     #Press add webhooks button
     driver.implicitly_wait(15)
     addWebhookBtn = driver.find_element(By.XPATH, '//button[contains(@class,"ls-button_look_") and text()="Add Webhook"]')
