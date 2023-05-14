@@ -1,1 +1,0 @@
-../common/30-run-db-migrations.sh
