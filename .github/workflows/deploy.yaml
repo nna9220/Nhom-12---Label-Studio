@@ -27,18 +27,18 @@ jobs:
             sudo systemctl restart docker
           fi
           
-          if [ -d "Nhom01-DeTai01-Label-Studio" ]; then
-            cd Nhom01-DeTai01-Label-Studio
-            git pull https://github.com/KhaiNguyenDuc/Nhom01-DeTai01-Label-Studio.git && \echo "Pull completed"
+          if [ -d "github_label_studio" ]; then
+            cd github_label_studio
+            git pull https://github.com/nna9220/Nhom-12---Label-Studio.git && \echo "Pull completed"
             cd ../
           else
-            git clone https://github.com/KhaiNguyenDuc/Nhom01-DeTai01-Label-Studio.git && \echo "Clone completed"
+            git clone https://github.com/nna9220/Nhom-12---Label-Studio.git && \echo "Clone completed"
           fi
           
-          sudo docker ps -a --filter ancestor=nhom1/label-studio --format "{{.ID}}" | xargs -r sudo docker stop && \echo "Stop completed"
-          sudo docker ps -a --filter ancestor=nhom1/label-studio --format "{{.ID}}" | xargs -r sudo docker rm && \echo "Remove completed"
+          sudo docker ps -a --filter ancestor=nguyenthithuytrang/nhom12_label-studio --format "{{.ID}}" | xargs -r sudo docker stop && \echo "Stop completed"
+          sudo docker ps -a --filter ancestor=nguyenthithuytrang/nhom12_label-studio --format "{{.ID}}" | xargs -r sudo docker rm && \echo "Remove completed"
           
-          cd Nhom01-DeTai01-Label-Studio
+          cd github_label_studio
           chmod -R 755 ./deploy
           sudo apt-get update
           sudo apt-get install -y docker.io
@@ -49,4 +49,4 @@ jobs:
           sudo docker-compose down
           sudo docker-compose up -d --build && \echo "Compose completed"
           
-          sudo docker run -d -p 8080:8080 nhom1/label-studio 
+          sudo docker run -d -p 8080:8080 nguyenthithuytrang/nhom12_label-studio
