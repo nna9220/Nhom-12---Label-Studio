@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "lethikimle/github_label_studio:latest",
+      "Name": "nguyenthithuytrang/nhom12_label-studio:latest",
       "Update": "true"
     },
     "Ports": [
