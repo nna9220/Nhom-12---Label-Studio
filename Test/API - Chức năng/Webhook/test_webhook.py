@@ -10,8 +10,8 @@ def test_create_webhook():
 
     # Login
     driver.get("http://127.0.0.1:8080/user/login/")
-    driver.find_element(By.NAME, "email").send_keys("duckhailinux@gmail.com")
-    driver.find_element(By.NAME, "password").send_keys("k989898k")
+    driver.find_element(By.NAME, "email").send_keys("nna9220@gmail.com")
+    driver.find_element(By.NAME, "password").send_keys("nanguyen")
     loginBtn = driver.find_element(By.CLASS_NAME, 'ls-button_look_primary')
     loginBtn.click()
     # End Login
