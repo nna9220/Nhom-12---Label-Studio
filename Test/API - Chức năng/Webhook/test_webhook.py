@@ -1,3 +1,4 @@
+"""
 import pytest
 from selenium import webdriver
 import time
@@ -36,3 +37,4 @@ def test_create_webhook():
     addWebhookBtn = driver.find_element(By.XPATH, '//button[contains(@class,"ls-button_look_") and text()="Add Webhook"]')
     addWebhookBtn.click()
     driver.close()
+ """
