@@ -6,6 +6,7 @@ on:
 
 permissions: read-all
 
+
 jobs:
   config:
     name: Config project
@@ -21,8 +22,8 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           
-          if [ -d "Nhom12-Label-Studio" ]; then
-            cd Nhom12-Label-Studio
+          if [ -d "Nhom-12---Label-Studio" ]; then
+            cd Nhom-12---Label-Studio
             git pull https://github.com/nna9220/Nhom-12---Label-Studio.git
             wait
             cd ../
@@ -45,10 +46,10 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          sudo docker ps -a --filter ancestor=nhom12/label-studio --format "{{.ID}}" | xargs -r sudo docker stop && \echo "Stop completed"
-          sudo docker ps -a --filter ancestor=nhom12/label-studio --format "{{.ID}}" | xargs -r sudo docker rm && \echo "Remove completed"
+          sudo docker ps -a --filter ancestor=nhom12_label_studio --format "{{.ID}}" | xargs -r sudo docker stop && \echo "Stop completed"
+          sudo docker ps -a --filter ancestor=nhom12_label_studio --format "{{.ID}}" | xargs -r sudo docker rm && \echo "Remove completed"
           
-          cd Nhom12-Label-Studio
+          cd Nhom-12---Label-Studio
           chmod -R 755 ./deploy
           sudo apt-get update
           sudo apt-get install -y docker.io
@@ -78,4 +79,4 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          sudo docker run -d -p 8080:8080 nhom12/label-studio 
+          sudo docker run -d -p 8080:8080 nhom12_label_studio 
