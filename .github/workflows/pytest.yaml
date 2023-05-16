@@ -1,0 +1,37 @@
+name: Label Studio Selenium Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10.10
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          pip install chromedriver-autoinstaller
+          pip install selenium
+          pip install pytest-html
+
+      - name: Run tests
+        run: |
+          python -m unittest discover -s tests -p 'test_*.py'
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: Test Report
+          path: label_studio/report.html
