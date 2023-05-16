@@ -21,8 +21,8 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             
-            if [ -d "Nhom-12---Label-Studio" ]; then
-              cd Nhom-12---Label-Studio
+            if [ -d "Nhom-12-Label-Studio" ]; then
+              cd Nhom-12-Label-Studio
               git pull pull https://github.com/nna9220/Nhom-12---Label-Studio.git
               wait
               cd ../
@@ -76,7 +76,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             
-            cd Nhom-12---Label-Studio
+            cd Nhom-12-Label-Studio
             chmod -R 755 ./deploy
             sudo apt-get update
             sudo apt-get install -y docker.io
