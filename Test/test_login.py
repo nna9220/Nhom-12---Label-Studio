@@ -1,4 +1,5 @@
 import pytest
+import unittest
 from selenium.webdriver.common.by import By
 from Utils.driver_connect import get_connection
 
@@ -27,3 +28,5 @@ def test_login_failure():
 
     assert errorTxt.text == "The email and password you entered don't match."
     driver.close()
+if __name__ == '__main__':
+    unittest.main(testRunner=unittest.TextTestRunner(stream=open('reportlogin.txt', 'w')))
