@@ -39,14 +39,16 @@ jobs:
           pip install textblob
           pip install tweepy
           pip install requests>=2.28
-          pip install pytest 
+          pip install pytest
           pip install pytest-html
 
       - name: Run tests
-        run:  pytest --junitxml=report.xml
+        run: pytest --junitxml=report.xml --html=report.html --self-contained-html
 
-      - name: Upload report artifact
+      - name: Upload report artifacts
         uses: actions/upload-artifact@v2
         with:
           name: Test Report
-          path: report.xml
+          path: | 
+            - report.xml
+            - report.html
