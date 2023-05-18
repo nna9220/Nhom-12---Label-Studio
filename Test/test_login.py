@@ -1,33 +1,29 @@
-import pytest
 import unittest
-from selenium.webdriver.common.by import By
-from Utils.driver_connect import get_connection
+from selenium import webdriver
 
-def test_login_success():
-    driver = get_connection()
+class LoginTestCase(unittest.TestCase):
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+        self.driver.implicitly_wait(10)  # Chờ tối đa 10 giây cho mỗi yêu cầu tìm kiếm phần tử
 
-    driver.get("http://ec2-13-211-254-157.ap-southeast-2.compute.amazonaws.com:8080/user/login/")
+    def tearDown(self):
+        self.driver.quit()
 
-    driver.find_element(By.NAME, "email").send_keys("nna9220@gmail.com")
-    driver.find_element(By.NAME, "password").send_keys("nanguyen")
-    loginBtn = driver.find_element(By.CLASS_NAME, 'ls-button_look_primary')
-    loginBtn.click()
-    driver.close()
+    def test_login(self):
+        self.driver.get('http://ec2-13-238-255-249.ap-southeast-2.compute.amazonaws.com:8080/user/login/')  # Thay thế 'your-label-studio-url' bằng URL của Label Studio
+        # Thực hiện các thao tác đăng nhập
+        # Ví dụ:
+        username_input = self.driver.find_element_by_id('username')
+        password_input = self.driver.find_element_by_id('password')
+        login_button = self.driver.find_element_by_id('login-button')
 
-def test_login_failure():
-    driver = get_connection()
+        username_input.send_keys('nna9220@gmail.com')  # Thay thế 'your-username' bằng tên đăng nhập của bạn
+        password_input.send_keys('nanguyen
 
-    driver.get("http://ec2-13-211-254-157.ap-southeast-2.compute.amazonaws.com:8080/user/login/")
+        # Kiểm tra xem đăng nhập thành công hay không
+        # Ví dụ:
+        welcome_message = self.driver.find_element_by_xpath('//div[@class="welcome-message"]')
+        self.assertEqual(welcome_message.text, 'Welcome, nna9220')  # Thay thế 'your-username' bằng tên đăng nhập của bạn
 
-    driver.find_element(By.NAME, "email").send_keys("nna9220@gmail.com")
-    driver.find_element(By.NAME, "password").send_keys("nanguyen")
-    loginBtn = driver.find_element(By.CLASS_NAME, 'ls-button_look_primary')
-    loginBtn.click()
-
-    errorTxt = driver.find_element(By.CLASS_NAME, "error")
-
-    assert errorTxt.text == "The email and password you entered don't match."
-    driver.close()
 if __name__ == '__main__':
-    unittest.main(testRunner=unittest.TextTestRunner(stream=open('reportlogin.txt', 'w')))
-    
+    unittest.main(testRunner=unittest.TextTestRunner(stream=open('report.txt', 'w')))
