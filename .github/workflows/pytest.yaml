@@ -29,6 +29,7 @@ jobs:
           pip install ujson
           pip install requests_mock
           pip install boto3
+          pip install moto
           pip install pytest
           pip install pytest-html
 
