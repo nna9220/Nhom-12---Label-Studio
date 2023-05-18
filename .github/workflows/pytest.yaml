@@ -39,13 +39,17 @@ jobs:
           pip install pandas
           pip install textblob
           pip install tweepy
-          python -c "import pandas as pd; df = pd.DataFrame(['text']);"
           pip install pytest 
           pip install pytest-html
 
       - name: Run tests
         run: |
           python -m unittest discover -s Test -p 'test_*.py'
-      - name: Upload Test Report
-        run: |
-          pytest --html=report.html
+      - name: Create report file
+        run: echo "Test report content" > report.txt
+
+      - name: Upload report
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-report
+          path: report.txt
