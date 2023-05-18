@@ -39,7 +39,6 @@ jobs:
           pip install pandas
           pip install textblob
           pip install tweepy
-          python -c "import pandas;df=pandas.DataFrame({'text': ['Text 1', 'Text 2', 'Text 3']})"
           pip install pytest 
           pip install pytest-html
 
@@ -47,7 +46,9 @@ jobs:
         run: |
           python -m unittest discover -s Test -p 'test_*.py'
       - name: Run tests and generate HTML report
-        run: pytest --html=report.html
+        run: |
+          python -c "import pandas;df=pandas.DataFrame({'text': ['Text 1', 'Text 2', 'Text 3']})"
+          pytest --html=report.html
 
       - name: Upload report
         uses: actions/upload-artifact@v2
