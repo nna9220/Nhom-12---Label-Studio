@@ -16,10 +16,10 @@ from pathlib import Path
 from datetime import timedelta
 
 from django.conf import settings
-from projects.models import Project
-from tasks.models import Task
-from users.models import User
-from organizations.models import Organization
+from label_studio.projects.models import Project
+from label_studio.tasks.models import Task
+from label_studio.users.models import User
+from label_studio.organizations.models import Organization
 from types import SimpleNamespace
 
 from label_studio.core.utils.params import get_bool_env, get_env
