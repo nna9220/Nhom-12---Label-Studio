@@ -38,7 +38,9 @@ jobs:
           pip install requests>=2.28
           pip install pytest
           pip install pytest-html
-
+      - name: Create vaccination_tweets.csv
+         run:|
+          echo "col1,col2,col3" > $GITHUB_WORKSPACE/vaccination_tweets.csv
       - name: Run tests
         run: pytest --junitxml=report.xml
 
