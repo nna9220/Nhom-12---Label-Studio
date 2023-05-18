@@ -39,7 +39,7 @@ jobs:
           pip install pandas
           pip install textblob
           pip install tweepy
-          python -c "df=pandas.DataFrame({'text': ['Text 1', 'Text 2', 'Text 3']})"
+          python -c "import pandas;df=pandas.DataFrame({'text': ['Text 1', 'Text 2', 'Text 3']})"
           pip install pytest 
           pip install pytest-html
 
