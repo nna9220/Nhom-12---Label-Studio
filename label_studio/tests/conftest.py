@@ -16,7 +16,7 @@ from pathlib import Path
 from datetime import timedelta
 
 from django.conf import settings
-from projects.models import Project
+from models import Project
 from tasks.models import Task
 from users.models import User
 from organizations.models import Organization
