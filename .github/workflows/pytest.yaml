@@ -25,6 +25,7 @@ jobs:
         run: |
           pip install chromedriver-autoinstaller
           pip install selenium
+          pip install webdriver_manager
           pip install pytest-html
 
       - name: Run tests
