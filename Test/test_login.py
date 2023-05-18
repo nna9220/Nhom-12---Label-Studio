@@ -18,7 +18,7 @@ class LoginTestCase(unittest.TestCase):
         login_button = self.driver.find_element_by_id('login-button')
 
         username_input.send_keys('nna9220@gmail.com')  # Thay thế 'your-username' bằng tên đăng nhập của bạn
-        password_input.send_keys('nanguyen
+        password_input.send_keys('nanguyen')
 
         # Kiểm tra xem đăng nhập thành công hay không
         # Ví dụ:
