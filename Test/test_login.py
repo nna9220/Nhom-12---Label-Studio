@@ -6,7 +6,7 @@ from Utils.driver_connect import get_connection
 def test_login_success():
     driver = get_connection()
 
-    driver.get("ec2-13-211-254-157.ap-southeast-2.compute.amazonaws.com:8080/user/login/")
+    driver.get("http://ec2-13-211-254-157.ap-southeast-2.compute.amazonaws.com:8080/user/login/")
 
     driver.find_element(By.NAME, "email").send_keys("nna9220@gmail.com")
     driver.find_element(By.NAME, "password").send_keys("nanguyen")
@@ -17,7 +17,7 @@ def test_login_success():
 def test_login_failure():
     driver = get_connection()
 
-    driver.get("ec2-13-211-254-157.ap-southeast-2.compute.amazonaws.com:8080/user/login/")
+    driver.get("http://ec2-13-211-254-157.ap-southeast-2.compute.amazonaws.com:8080/user/login/")
 
     driver.find_element(By.NAME, "email").send_keys("nna9220@gmail.com")
     driver.find_element(By.NAME, "password").send_keys("nanguyen")
