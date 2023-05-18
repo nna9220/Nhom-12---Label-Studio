@@ -6,6 +6,7 @@ on:
 
 permissions: read-all
 
+
 jobs:
   config:
     name: Config project
