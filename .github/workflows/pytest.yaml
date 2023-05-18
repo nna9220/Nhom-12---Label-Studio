@@ -43,11 +43,10 @@ jobs:
           pip install pytest-html
 
       - name: Run tests
-        run: pytest=report.txt
+        run: pytest --junitxml=report.xml
 
       - name: Upload report artifacts
         uses: actions/upload-artifact@v2
         with:
           name: Test Report
-          path: | 
-            - report.txt
+          path: report.xml
