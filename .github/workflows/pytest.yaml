@@ -44,10 +44,10 @@ jobs:
 
       - name: Run tests
           python -c "import pandas;df=pandas.DataFrame();df['text'] = ['Text1'];"
-        run:  pytest --html=report.html
+        run:  pytest --html=report.txt
 
       - name: Upload report artifact
         uses: actions/upload-artifact@v2
         with:
           name: Test Report
-          path: report.html
+          path: report.txt
