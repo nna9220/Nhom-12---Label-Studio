@@ -33,7 +33,5 @@ jobs:
         run: |
           python -m unittest discover -s Test -p 'test_*.py'
       - name: Upload Test Report
-        uses: actions/upload-artifact@v2
-        with:
-          name: Test Report
-          path: label_studio/report.html
+        run: |
+          pytest --html=report.html
