@@ -43,8 +43,7 @@ jobs:
           pip install pytest-html
 
       - name: Run tests
-          python -c "import pandas;df=pandas.DataFrame();df['text'] = ['Text1'];"
-        run:  pytest --html=report.txt
+        run:  pytest=report.txt
 
       - name: Upload report artifact
         uses: actions/upload-artifact@v2
