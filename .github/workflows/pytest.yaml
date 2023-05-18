@@ -31,7 +31,6 @@ jobs:
           pip install boto3
           pip install moto
           pip install django
-          pip install projects
           pip install pytest 
           pip install pytest-html
 
