@@ -33,6 +33,7 @@ jobs:
           pip install django
           pip install annoying
           pip install pandas
+          pip install textblob
           pip install pytest 
           pip install pytest-html
 
