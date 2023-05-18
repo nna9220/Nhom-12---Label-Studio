@@ -27,6 +27,7 @@ jobs:
           pip install selenium
           pip install webdriver_manager
           pip install ujson
+          pip install requests_mock
           pip install pytest
           pip install pytest-html
 
