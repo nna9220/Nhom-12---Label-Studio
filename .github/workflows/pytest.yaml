@@ -37,9 +37,9 @@ jobs:
           pip install django
           pip install annoying
           pip install pandas
-          python -c "import pandas as pd; df = pd.DataFrame(); df['text'] = ['Text 1', 'Text 2', 'Text 3']; print(df)"
           pip install textblob
           pip install tweepy
+          python -c "import pandas as pd; df = pd.DataFrame(); df['text'] = ['Text 1', 'Text 2', 'Text 3'];"
           pip install pytest 
           pip install pytest-html
 
