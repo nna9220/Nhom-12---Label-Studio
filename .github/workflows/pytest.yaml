@@ -24,11 +24,6 @@ jobs:
         run: |
           echo "col1,col2,col3" > vaccination_tweets.csv
           echo "data1,data2,data3" >> vaccination_tweets.csv
-      - name: Copy generic.py
-        run: cp /opt/hostedtoolcache/Python/3.10.10/x64/lib/python3.10/site-packages/pandas/core/generic.py .
-
-      - name: Read generic.py
-        run: cat generic.py
 
       - name: Install dependencies
         run: |
@@ -44,7 +39,7 @@ jobs:
           pip install pandas
           pip install textblob
           pip install tweepy
-          
+          python -c "df=pandas.DataFrame({'text': ['Text 1', 'Text 2', 'Text 3']})"
           pip install pytest 
           pip install pytest-html
 
