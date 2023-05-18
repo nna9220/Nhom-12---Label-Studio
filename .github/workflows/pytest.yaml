@@ -20,9 +20,6 @@ jobs:
 
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Create vaccination_tweets.csv
-        run: |
-          echo "col1,col2,col3" > vaccination_tweets.csv
 
       - name: Install dependencies
         run: |
