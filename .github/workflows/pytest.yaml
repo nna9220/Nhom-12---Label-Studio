@@ -41,9 +41,9 @@ jobs:
           pip install requests>=2.28
           pip install pytest 
           pip install pytest-html
-          python -c "import pandas;df=pandas.DataFrame();df['text'] = ['Text1'];"
 
       - name: Run tests
+          python -c "import pandas;df=pandas.DataFrame();df['text'] = ['Text1'];"
         run:  pytest --html=report.html
 
       - name: Upload report artifact
