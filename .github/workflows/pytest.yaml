@@ -43,15 +43,9 @@ jobs:
           pip install pytest-html
 
       - name: Run tests
-        run: |
-          python -m unittest discover -s Test -p 'test_*.py'
-      - name: Run tests and generate HTML report
-        run: |
-          pytest --html=report.html
-          python -c "import pandas;df=pandas.DataFrame({'text'})"
-
-      - name: Upload report
+        run:  python -m unittest discover -s Test -p 'test_*.py' > reportlogin.txt
+      - name: Upload reportlogin.txt
         uses: actions/upload-artifact@v2
         with:
-          name: test-report
-          path: report.html
+          name: Test Report
+          path: reportlogin.txt
