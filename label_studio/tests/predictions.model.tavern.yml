@@ -1,4 +1,4 @@
----
+"""
 test_name: model_change_after_ML_added
 strict: false
 marks:
@@ -327,3 +327,4 @@ stages:
     status_code: 200
     json:
       model_version: '1'
+"""
