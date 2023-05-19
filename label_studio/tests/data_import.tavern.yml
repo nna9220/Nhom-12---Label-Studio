@@ -1,4 +1,5 @@
-"""---test_name: image_upload
+"""
+test_name: image_upload
 strict: false
 marks:
 - usefixtures:

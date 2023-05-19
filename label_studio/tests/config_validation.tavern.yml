@@ -1,4 +1,4 @@
----
+"""
 test_name: invalidate_fields_in_label_config
 strict: false
 marks:
@@ -626,3 +626,4 @@ stages:
         taxonomy_other: null
   response:
     status_code: 201
+"""
