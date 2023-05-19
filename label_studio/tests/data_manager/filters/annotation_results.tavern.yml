@@ -1,4 +1,4 @@
----
+"""
 test_name: tasks_api_filter
 strict: false
 marks:
@@ -234,3 +234,4 @@ stages:
     status_code: 200
     json:
       total: 1
+"""
