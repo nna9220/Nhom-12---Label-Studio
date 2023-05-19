@@ -1,4 +1,4 @@
----
+"""
 test_name: simple_export
 strict: false
 marks:
@@ -168,3 +168,4 @@ stages:
         name: 'ASR_MANIFEST'
         disabled: true
     status_code: 200
+"""
