@@ -1,4 +1,4 @@
----
+"""
 test_name: skip_queue_requeue_for_others
 strict: false
 marks:
@@ -285,3 +285,5 @@ stages:
 - *get_next_task_queue_is_empty
 - *check_first_task_is_labeled
 - *check_second_task_is_labeled
+
+"""
