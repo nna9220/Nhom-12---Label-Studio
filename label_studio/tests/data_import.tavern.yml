@@ -1,4 +1,4 @@
----
+"""
 test_name: image_upload
 strict: false
 marks:
@@ -805,3 +805,4 @@ stages:
           - ' extension is not supported'
 
     status_code: 400
+"""
