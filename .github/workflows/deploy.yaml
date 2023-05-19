@@ -22,13 +22,13 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           
-          if [ -d "Group16-s-LabelStudio_Project" ]; then
+          if [ -d "Nhom-12---Label-Studio" ]; then
             cd Nhom-12---Label-Studio
-            git pull https://github.com/LeThiKimLe/Group16-s-LabelStudio_Project.git
+            https://github.com/nna9220/Nhom-12---Label-Studio.git
             wait
             cd ../
           else
-            git clone https://github.com/LeThiKimLe/Group16-s-LabelStudio_Project.git
+            https://github.com/nna9220/Nhom-12---Label-Studio.git
             wait
           fi
           
@@ -45,7 +45,7 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          sudo docker ps -a --filter ancestor=lethikimle/github_label_studio --format "{{.ID}}" | xargs -r sudo docker stop 
+          sudo docker ps -a --filter ancestor=nhom12/label_studio --format "{{.ID}}" | xargs -r sudo docker stop 
       
   remove-old-container:
     name: Remove container
@@ -60,7 +60,7 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-            sudo docker ps -a --filter ancestor=lethikimle/github_label_studio --format "{{.ID}}" | xargs -r sudo docker rm
+            sudo docker ps -a --filter ancestor=nhom12/label_studio --format "{{.ID}}" | xargs -r sudo docker rm
           
           
   deploy:
@@ -77,7 +77,7 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           
-          cd Group16-s-LabelStudio_Project
+          cd Nhom-12---Label-Studio
           chmod -R 755 ./deploy
           sudo apt-get update
           sudo apt-get install -y docker.io
@@ -107,4 +107,4 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          sudo docker run -d -p 8080:8080 lethikimle/github_label_studio 
+          sudo docker run -d -p 8080:8080 nhom12/label_studio 
