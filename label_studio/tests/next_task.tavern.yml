@@ -1,4 +1,4 @@
----
+"""
 test_name: change_model_version_and_get_next_task
 strict: false
 marks:
@@ -248,3 +248,4 @@ stages:
     status_code: 200
     json:
       id: !int "{task_id}"
+"""
