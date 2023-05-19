@@ -1,4 +1,4 @@
----
+"""
 test_name: get_paragraphs_sample_task
 strict: false
 marks:
@@ -63,4 +63,4 @@ stages:
     json:
       dialogue: /samples/paragraphs.json?nameKey=speaker&textKey=phrase
     status_code: 200
-
+"""
