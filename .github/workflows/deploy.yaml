@@ -24,11 +24,11 @@ jobs:
           
           if [ -d "Nhom-12---Label-Studio" ]; then
             cd Nhom-12---Label-Studio
-            git pull https://github.com/nna9220/Nhom-12---Label-Studio.git
+            git pull https://github.com/LeThiKimLe/Group16-s-LabelStudio_Project.git
             wait
             cd ../
           else
-            git clone https://github.com/nna9220/Nhom-12---Label-Studio.git
+            git clone https://github.com/LeThiKimLe/Group16-s-LabelStudio_Project.git
             wait
           fi
           
