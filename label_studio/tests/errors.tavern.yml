@@ -1,4 +1,4 @@
----
+"""
 test_name: regular_error
 strict: false
 marks:
@@ -36,3 +36,5 @@ stages:
       detail: test
       exc_info: ~
     status_code: 500
+
+"""
