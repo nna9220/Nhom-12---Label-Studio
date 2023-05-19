@@ -1,4 +1,4 @@
----
+"""
 test_name: tasks_api_test
 strict: false
 marks:
@@ -59,3 +59,4 @@ stages:
     url: '{django_live_url}/api/tasks/{task_pk}{task_pk}'
   response:
     status_code: 404
+"""
