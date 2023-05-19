@@ -1,4 +1,4 @@
----
+"""
 test_name: views_test
 strict: false
 marks:
@@ -33,3 +33,4 @@ stages:
     url: '{django_live_url}/projects'
   response:
     status_code: 200
+"""
