@@ -1,13 +1,10 @@
 """This file and its contents are licensed under the Apache License 2.0. Please see the included NOTICE for copyright information and LICENSE for a copy of the license.
 """
-# Package name
-package_name = 'label-studio'
 
-# Package version
-__version__ = '1.7.4dev'
+try:
+    from requests._internal_utils import HEADER_VALIDATORS
+    from tavern.util.formatted_str import FormattedString
 
-# pypi info
-__latest_version__ = None
-__current_version_is_outdated__ = False
-__latest_version_upload_time__ = None
-__latest_version_check_time__ = None
+    HEADER_VALIDATORS[FormattedString] = HEADER_VALIDATORS[str]
+except ImportError:
+    print('\n Your requests version is under 2.28 and it does not support HEADER_VALIDATORS. \n')
