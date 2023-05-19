@@ -1,4 +1,4 @@
-"""
+---
 test_name: tasks_download_storage
 strict: false
 marks:
@@ -25,4 +25,3 @@ stages:
     url: '{django_live_url}/storage-data/uploaded/?filepath=test'
   response:
     status_code: 403
-"""

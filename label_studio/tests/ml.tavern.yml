@@ -1,4 +1,4 @@
-"""
+---
 test_name: test_ml_backend_creation
 strict: false
 marks:
@@ -221,4 +221,3 @@ stages:
   response:
     status_code: 204
 
-"""

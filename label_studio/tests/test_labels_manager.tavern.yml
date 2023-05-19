@@ -1,4 +1,5 @@
-"""
+---
+
 test_name: test_labels_manager
 
 strict: False
@@ -257,4 +258,3 @@ stages:
       url: '{django_live_url}/api/projects/{project_pk}/validate'
     response:
       status_code: 200
-"""

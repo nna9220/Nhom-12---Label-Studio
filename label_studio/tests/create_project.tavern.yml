@@ -1,4 +1,4 @@
-"""
+---
 test_name: create_project_with_label_config_then_import
 strict: false
 marks:
@@ -84,4 +84,3 @@ stages:
         image: 3
     status_code: 200
 
-"""

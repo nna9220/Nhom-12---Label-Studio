@@ -1,4 +1,4 @@
-"""
+---
 test_name: test_import_from_s3_storage
 strict: false
 marks:
@@ -1249,4 +1249,3 @@ stages:
     json:
       last_sync_count: 0
     status_code: 200
-"""

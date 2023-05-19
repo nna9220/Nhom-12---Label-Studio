@@ -1,4 +1,4 @@
-"""
+---
 test_name: dm-columns
 strict: false
 marks:
@@ -53,4 +53,3 @@ stages:
              "task_count": 6, "annotation_count": 0}
 
       status_code: 200
-"""

@@ -1,4 +1,4 @@
-"""
+---
 test_name: import_repeater_with_nested_fields
 strict: false
 marks:
@@ -47,4 +47,3 @@ stages:
     status_code: 201
 
 
-"""

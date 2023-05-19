@@ -1,4 +1,5 @@
 """This file and its contents are licensed under the Apache License 2.0. Please see the included NOTICE for copyright information and LICENSE for a copy of the license.
+"""
 import pytest
 import types
 from core.utils.common import int_from_request
@@ -133,4 +134,3 @@ def test_start_browser():
 
     assert start_browser('http://localhost:8080', True) is None
     assert start_browser('http://localhost:8080', False) is None
-"""

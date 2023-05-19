@@ -1,4 +1,5 @@
-"""
+---
+
 test_name: test_docs
 
 strict: False
@@ -25,4 +26,3 @@ stages:
       status_code: 200
       verify_response_with:
         function: tests.utils:verify_docs
-"""

@@ -1,4 +1,4 @@
-"""
+---
 test_name: crud
 strict: false
 marks:
@@ -147,4 +147,3 @@ stages:
       score: 0.987
       model_version: test_model
     status_code: 200
- """

@@ -1,4 +1,4 @@
-"""
+---
 test_name: test_import_from_localstorage
 strict: false
 marks:
@@ -312,4 +312,3 @@ stages:
         - data:
             image_url: !re_match \/data\/local-files\/\?d=subdir[\/\\]test_image2.png
     status_code: 200
-"""
