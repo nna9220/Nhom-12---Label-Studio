@@ -1,4 +1,4 @@
----
+"""
 test_name: no_annotation_no_drafts
 strict: false
 marks:
@@ -507,3 +507,4 @@ stages:
     verify_response_with:
       function: tests.utils:empty_list
     status_code: 200
+"""
