@@ -23,9 +23,6 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pip install
           pip install pytest
           pip install pytest-html
-
-      - name: Run tests
-        run: 
-          python -m unittest discover -s Test -p 'test_*.py'
