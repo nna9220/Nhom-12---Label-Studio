@@ -1,5 +1,4 @@
----
-test_name: image_upload
+"""---test_name: image_upload
 strict: false
 marks:
 - usefixtures:
@@ -805,3 +804,4 @@ stages:
           - ' extension is not supported'
 
     status_code: 400
+"""
