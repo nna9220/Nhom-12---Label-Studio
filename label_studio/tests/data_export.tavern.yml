@@ -1,4 +1,4 @@
----
+"""
 test_name: auth_export_error
 strict: false
 marks:
@@ -355,3 +355,4 @@ stages:
       url: '{django_live_url}/api/projects/{project_pk}/export?exportType=JSON_MIN'
     response:
       status_code: 200
+"""
