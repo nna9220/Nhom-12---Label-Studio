@@ -1,4 +1,4 @@
----
+"""
 test_name: project_tasks_api_paging_test
 strict: false
 marks:
@@ -188,3 +188,4 @@ stages:
     url: '{django_live_url}/api/projects/{project_pk}/tasks?start=240000&page_size=100000000'
   response:
     status_code: 404
+"""
