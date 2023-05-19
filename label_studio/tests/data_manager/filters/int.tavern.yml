@@ -1,4 +1,4 @@
----
+"""
 test_name: int-filter-greater
 strict: false
 marks:
@@ -426,3 +426,4 @@ stages:
         "total": 0
       }
       status_code: 200
+"""
