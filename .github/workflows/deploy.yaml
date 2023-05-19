@@ -6,7 +6,6 @@ on:
 
 permissions: read-all
 
-
 jobs:
   config:
     name: Config project
@@ -22,13 +21,13 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           
-          if [ -d "Nhom-12---Label-Studio" ]; then
-            cd Nhom-12---Label-Studio
-            git pull https://github.com/nna9220/Nhom-12---Label-Studio.git
+          if [ -d "Nhom01-DeTai01-Label-Studio" ]; then
+            cd Nhom01-DeTai01-Label-Studio
+            git pull https://github.com/KhaiNguyenDuc/Nhom01-DeTai01-Label-Studio.git 
             wait
             cd ../
           else
-            git clone https://github.com/nna9220/Nhom-12---Label-Studio.git
+            git clone https://github.com/KhaiNguyenDuc/Nhom01-DeTai01-Label-Studio.git 
             wait
           fi
           
@@ -77,7 +76,7 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           
-          cd Nhom-12---Label-Studio
+          cd Nhom01-DeTai01-Label-Studio
           chmod -R 755 ./deploy
           sudo apt-get update
           sudo apt-get install -y docker.io
