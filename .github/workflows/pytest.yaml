@@ -20,14 +20,29 @@ jobs:
 
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Create vaccination_tweets.csv
+        run: |
+          echo "col1,col2,col3" > vaccination_tweets.csv
 
       - name: Install dependencies
         run: |
           pip install chromedriver-autoinstaller
           pip install selenium
+          pip install webdriver_manager
+          pip install ujson
+          pip install requests_mock
+          pip install boto3
+          pip install moto
+          pip install django
+          pip install annoying
+          pip install pandas
+          pip install textblob
+          pip install tweepy
+          pip install requests>=2.28
+          pip install pytest
           pip install pytest-html
 
       - name: Run tests
-        run: |
+        run: 
           python -m unittest discover -s Test -p 'test_*.py'
 
