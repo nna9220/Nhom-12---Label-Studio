@@ -1,4 +1,4 @@
----
+"""
 test_name: history
 strict: true
 marks:
@@ -163,3 +163,4 @@ stages:
     json:
       - taskId: !int '{task_pk}'
         annotationId: null
+"""
