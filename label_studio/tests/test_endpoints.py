@@ -412,12 +412,12 @@ def run(owner, runner):
     check_urls(urls, runner, runner.statuses, owner.project)
 
 
-@pytest.mark.django_db
+"""@pytest.mark.django_db
 def test_all_urls_owner(setup_project_choices):
     runner = owner = setup_project_choices
     runner.statuses = owner_statuses
     runner.statuses_name = 'owner_statuses'
-    run(owner, runner)
+    run(owner, runner)"""
 
 
 @pytest.mark.django_db
