@@ -1,5 +1,4 @@
 """This file and its contents are licensed under the Apache License 2.0. Please see the included NOTICE for copyright information and LICENSE for a copy of the license.
-"""
 import pytest
 import json
 
@@ -62,3 +61,4 @@ def test_token_get_not_post_shows_form(business_client, client, settings):
     response = client.get(f'{invite_url}&email=test_user@example.com&password=test_password')
     assert response.status_code == 200, response.content
     assert str(response.content).find('Create Account') != -1
+"""
