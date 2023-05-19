@@ -2,18 +2,16 @@
 """
 import pytest
 import json
-import threading
 import time
 
 from unittest import mock
-from functools import partial
 
 from django.apps import apps
 from django.db.models import Q
 from projects.models import Project
 from tasks.models import Task, Annotation, Prediction
 from .utils import (
-    ml_backend_mock, make_project, make_task, make_annotator,
+    make_project, make_task, make_annotator,
     invite_client_to_project, make_annotation, _client_is_annotator
 )
 from core.redis import redis_healthcheck

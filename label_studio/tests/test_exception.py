@@ -4,8 +4,6 @@ import mock
 import pytest
 import json
 
-from .utils import project_id
-
 
 @pytest.mark.django_db
 def test_custom_exception_handling(business_client, project_id):

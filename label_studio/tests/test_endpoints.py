@@ -4,7 +4,6 @@ import pytest
 import django
 import json
 import os
-from unittest import mock
 
 from django.urls import get_resolver
 from django.shortcuts import reverse
@@ -431,7 +430,6 @@ def test_all_urls_other_business(setup_project_choices, business_client):
 @pytest.mark.django_db
 def test_urls_mismatch_with_registered(tmpdir):
     from core.utils.io import find_file
-    from core.utils.params import get_bool_env
 
     all_urls_file = find_file('all_urls.json')
     with open(all_urls_file) as f:

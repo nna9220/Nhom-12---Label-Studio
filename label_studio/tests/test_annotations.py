@@ -3,7 +3,6 @@
 import pytest
 import json
 import requests_mock
-import math
 
 from django.apps import apps
 from django.urls import reverse
