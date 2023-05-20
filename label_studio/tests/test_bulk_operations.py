@@ -10,9 +10,9 @@ from label_studio.tests.test_data.gen_tasks_and_annotations import gen_tasks
 
 
 @pytest.mark.django_db
-"""def test_load_tasks_and_annotations(business_client, annotator_client, configured_project):
+def test_load_tasks_and_annotations(business_client, annotator_client, configured_project):
     """
-       """ this test loads tasks_and_annotations.json
+        this test loads tasks_and_annotations.json
         with 1000 tasks and 5000 annotations and recalc accuracy
         with bulk_update
         goal is to be under time limit to ensure operations
@@ -30,7 +30,7 @@ from label_studio.tests.test_data.gen_tasks_and_annotations import gen_tasks
     :param annotator_client:
     :param configured_project:
     :return:
-    """"""
+    """
     p = Project.objects.get(id=configured_project.id)
     project_id = configured_project.id
 
@@ -52,4 +52,4 @@ from label_studio.tests.test_data.gen_tasks_and_annotations import gen_tasks
     dt2 = datetime.datetime.now()
     # time depends on aws machine cpu
     # around 15-30 secs for 1000 tasks each w 5 annotations
-    assert (dt2-dt1).seconds < 150"""
+    assert (dt2-dt1).seconds < 150

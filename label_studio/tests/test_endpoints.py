@@ -4,6 +4,7 @@ import pytest
 import django
 import json
 import os
+from unittest import mock
 
 from django.urls import get_resolver
 from django.shortcuts import reverse
@@ -412,12 +413,12 @@ def run(owner, runner):
     check_urls(urls, runner, runner.statuses, owner.project)
 
 
-"""@pytest.mark.django_db
+@pytest.mark.django_db
 def test_all_urls_owner(setup_project_choices):
     runner = owner = setup_project_choices
     runner.statuses = owner_statuses
     runner.statuses_name = 'owner_statuses'
-    run(owner, runner)"""
+    run(owner, runner)
 
 
 @pytest.mark.django_db
@@ -426,10 +427,11 @@ def test_all_urls_other_business(setup_project_choices, business_client):
     business_client.statuses_name = 'other_business_statuses'
     run(setup_project_choices, business_client)
 
-"""
+
 @pytest.mark.django_db
 def test_urls_mismatch_with_registered(tmpdir):
     from core.utils.io import find_file
+    from core.utils.params import get_bool_env
 
     all_urls_file = find_file('all_urls.json')
     with open(all_urls_file) as f:
@@ -457,4 +459,4 @@ def test_urls_mismatch_with_registered(tmpdir):
                       f'New URLs added:\n{urls_added}.\n{instruction}'
 
     for url, new_url in zip(all_urls, all_current_urls):
-        assert url == new_url, f'URL name mismatch found. {instruction}'"""
+        assert url == new_url, f'URL name mismatch found. {instruction}'

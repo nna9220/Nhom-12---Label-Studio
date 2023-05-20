@@ -13,7 +13,7 @@ from django.contrib.postgres.fields.jsonb import KeyTextTransform
 from django.db.models.functions import Coalesce
 from django.conf import settings
 from django.db.models.functions import Cast
-from django.db.models import FloatField, Count
+from django.db.models import FloatField
 from datetime import datetime
 
 from data_manager.prepare_params import ConjunctionEnum

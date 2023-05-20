@@ -5,7 +5,7 @@ import json
 
 from django.db import transaction
 
-from ..utils import make_task, make_annotation, make_prediction
+from ..utils import make_task, make_annotation, make_prediction, project_id
 from projects.models import Project
 
 

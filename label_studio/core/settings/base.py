@@ -15,7 +15,7 @@ import logging
 import json
 
 from datetime import timedelta
-from label_studio.core.utils.params import get_bool_env, get_env
+from label_studio.core.utils.params import get_bool_env
 
 formatter = 'standard'
 JSON_LOG = get_bool_env('JSON_LOG', False)
@@ -71,7 +71,7 @@ if not logging.getLogger().hasHandlers():
     logging.basicConfig(level=logging.DEBUG, format='%(message)s')
 
 from label_studio.core.utils.io import get_data_dir
-from label_studio.core.utils.params import get_bool_env, get_env, get_env_list_int
+from label_studio.core.utils.params import get_bool_env, get_env
 
 logger = logging.getLogger(__name__)
 SILENCED_SYSTEM_CHECKS = []

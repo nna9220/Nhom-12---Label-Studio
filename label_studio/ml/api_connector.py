@@ -7,7 +7,7 @@ import urllib
 import attr
 from django.contrib.auth.models import AnonymousUser
 
-from django.db.models import Q, F, Count
+from django.db.models import   Count
 from django.conf import settings
 from requests.adapters import HTTPAdapter
 from core.version import get_git_version

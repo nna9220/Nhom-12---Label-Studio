@@ -9,7 +9,7 @@ import yaml
 import logging
 
 from core.label_config import parse_config, validate_label_config, parse_config_to_json
-from label_studio.tests.utils import make_task, make_annotation, make_prediction
+from label_studio.tests.utils import make_task, make_annotation, make_prediction, project_id
 from projects.models import Project
 
 logger = logging.getLogger(__name__)
@@ -20,7 +20,6 @@ logger = logging.getLogger(__name__)
         [2, 2, 2],
     ],
 )
-"""
 @pytest.mark.django_db
 def test_change_label_config_repeater(tasks_count, annotations_count, predictions_count, business_client, project_id):
     # Change label config to Repeater
@@ -102,7 +101,7 @@ def test_change_label_config_repeater(tasks_count, annotations_count, prediction
         content_type="application/json",
     )
     assert response.status_code == 400
-"""
+
 
 @pytest.mark.django_db
 def test_parse_all_configs():
@@ -117,7 +116,7 @@ def test_parse_all_configs():
             validate_label_config(config)
 
 
-"""@pytest.mark.django_db
+@pytest.mark.django_db
 def test_config_validation_for_choices_workaround(business_client, project_id):
     """
     Validate Choices tag for 1 choice with workaround
@@ -144,10 +143,10 @@ def test_config_validation_for_choices_workaround(business_client, project_id):
         data=json.dumps(payload),
         content_type="application/json",
     )
-    assert response.status_code == 200"""
+    assert response.status_code == 200
 
 
-"""@pytest.mark.django_db
+@pytest.mark.django_db
 def test_parse_wrong_xml(business_client, project_id):
     # Change label config to Repeater
     payload = {
@@ -166,9 +165,9 @@ def test_parse_wrong_xml(business_client, project_id):
         data=json.dumps(payload),
         content_type="application/json",
     )
-    assert response.status_code == 400"""
+    assert response.status_code == 400
 
-"""@pytest.mark.django_db
+@pytest.mark.django_db
 def test_label_config_versions(business_client, project_id):
     with io.open(os.path.join(os.path.dirname(__file__), 'test_data/data_for_test_label_config_matrix.yml')) as f:
         test_suites = yaml.safe_load(f)
@@ -181,5 +180,4 @@ def test_label_config_versions(business_client, project_id):
             content_type="application/json",
         )
         logger.warning(f"Test: {test_name}")
-        assert response.status_code == test_content['status_code']"""
-
+        assert response.status_code == test_content['status_code']

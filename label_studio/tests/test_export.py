@@ -2,7 +2,9 @@
 """
 import pytest
 import json
+import copy
 
+from django.db import transaction
 from tasks.models import Task, Annotation, Prediction
 from tasks.serializers import AnnotationSerializer
 from django.apps import apps

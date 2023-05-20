@@ -9,7 +9,8 @@ from rest_framework.test import APIClient
 from .utils import ml_backend_mock
 
 from projects.models import Project
-from tasks.models import Annotation
+from ml.models import MLBackendTrainJob
+from tasks.models import Annotation, Task
 
 
 @pytest.fixture

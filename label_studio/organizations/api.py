@@ -5,7 +5,7 @@ import logging
 from django.urls import reverse
 from django.conf import settings
 from rest_framework.parsers import FormParser, JSONParser, MultiPartParser
-from rest_framework import generics, serializers
+from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.pagination import PageNumberPagination
@@ -18,7 +18,7 @@ from django.utils.decorators import method_decorator
 from label_studio.core.permissions import all_permissions, ViewClassPermission
 from label_studio.core.utils.params import bool_from_request
 
-from organizations.models import Organization, OrganizationMember, InvitedPeople
+from organizations.models import Organization,  InvitedPeople
 from organizations.serializers import (
     OrganizationSerializer, OrganizationIdSerializer, OrganizationMemberUserSerializer, OrganizationInviteSerializer, OrganizationInvitedMemberSerializer,
     OrganizationsParamsSerializer, GroupSerializer, ResponseSerializer, OrganizationMember

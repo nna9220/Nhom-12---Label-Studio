@@ -4,7 +4,6 @@ import logging
 import json
 import pandas as pd
 import numpy as np
-import os
 import xmljson
 import jsonschema
 import re
@@ -16,7 +15,7 @@ from collections import defaultdict
 from django.conf import settings
 from label_studio.core.utils.io import find_file
 from label_studio.core.utils.exceptions import (
-    LabelStudioValidationErrorSentryIgnored, LabelStudioXMLSyntaxErrorSentryIgnored
+    LabelStudioValidationErrorSentryIgnored
 )
 from label_studio_tools.core import label_config
 

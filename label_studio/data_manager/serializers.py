@@ -2,7 +2,6 @@
 """
 import os
 import ujson as json
-from django.db.models import Avg
 
 from rest_framework import serializers
 from django.db import transaction

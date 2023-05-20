@@ -2,7 +2,7 @@ import time
 
 import pytest
 import threading
-from tasks.models import Task,   bulk_update_stats_project_tasks
+from tasks.models import Task, Annotation, Prediction, bulk_update_stats_project_tasks
 
 
 @pytest.mark.django_db
