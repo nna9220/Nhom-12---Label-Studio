@@ -29,7 +29,7 @@ jobs:
         run: |
           cd label_studio
           python -m pytest --html=report.html -vv -n auto --self-contained-html
-
+        
       - name: Upload Test Report
         uses: actions/upload-artifact@v2
         with:
