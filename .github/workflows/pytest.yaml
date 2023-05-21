@@ -32,6 +32,6 @@ jobs:
         
       - name: Upload Test Report
         uses: actions/upload-artifact@v2
-        with:
+        with: 
           name: Test Report
           path: label_studio/report.html
