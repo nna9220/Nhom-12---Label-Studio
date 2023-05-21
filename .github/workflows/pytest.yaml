@@ -27,8 +27,6 @@ jobs:
 
       - name: Run tests
         run: |
-          python label_studio/manage.py migrate
-          python label_studio/manage.py collectstatic
           cd label_studio
           python -m pytest --html=report.html -vv -n auto --self-contained-html
         
