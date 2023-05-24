@@ -21,7 +21,7 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          
+           
           if [ -d "Nhom-12---Label-Studio" ]; then
             cd Nhom-12---Label-Studio
             git pull https://github.com/nna9220/Nhom-12---Label-Studio.git
